@@ -15,8 +15,8 @@ model:
 
 experiment: 
   seed: 42 
-  group: "lemn-lab"
-  name: "climb-replication"
+  group: "climb-replication"
+  name: "climb-data"
 
 data_preprocessing:
   include_punctuation: True
@@ -26,7 +26,7 @@ data_preprocessing:
 trainer: 
   batch_size: 32 # across 4 GPUs gives an effective batch size of 128
   lr: 1e-3 # 1e-4 is used in fairseq; 1e-3 is default in huggingface
-  num_warmup_steps: 2_500
+  num_warmup_steps: 1_000
   max_training_steps: 10_000
   eval_blimp: False
   eval_glue: False
